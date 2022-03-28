@@ -1,6 +1,6 @@
 const Engine = require('./engine')
 
-class CarBody {
+module.exports = class CarBody {
     parts = []
 
     constructor () {
@@ -8,15 +8,13 @@ class CarBody {
     }
 
     install () {
-        this.engine.install()
         this.parts.push(this.engine)
     }
 
-    welding () {
+    welding() {
         this.parts.forEach(part => {
             console.log(`Welding car part: ${part.constructor.name}`)
-        })
-    }
-}
+        }
+        )}
 
-module.exports = CarBody
+}

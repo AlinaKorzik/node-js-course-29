@@ -1,17 +1,5 @@
-const CarBody = require('./car-body')
-
-class Engine {
-    constructor () {
-        this.carBody = new CarBody()
-    }
-
-    install () {
-        this.carBody.welding()
-    }
-
+module.exports = class Engine {
     run () {
         console.log('RRRR engine run!')
     }
 }
-
-module.exports = Engine
